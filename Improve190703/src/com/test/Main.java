@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		//System.out.println("Hello");
-		TxtWriter txtWriter=new TxtWriter("D:\\bak\\workspace\\improve190703\\new.txt");
+		//TxtWriter txtWriter=new TxtWriter("D:\\bak\\workspace\\improve190703\\new.txt");
 //		TxtWriter txtWriter=new TxtWriter("./File/new.txt");
 		
 		Encode64 encode=new Encode64();
