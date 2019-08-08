@@ -26,3 +26,13 @@ hs_err_pid*
 /bin/
 cxf/
 Improve190703/.settings/
+TestFrame01/.settings/
+TestFrame01/Screenshot/
+TestFrame01/target/
+TestFrame01/test-output/
+TestFrame01/Screenshot/
+TestFrame01/Screenshot/
+webdriver
+
+StartRemote.bat
+selenium-server-standalone-3.141.59.jar
