@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.pageobject.FreshHome;
-import com.pageobject.SearchPage;
+import com.pageobject.FreshSearch;
 import com.util.Screenshot;
 
 
@@ -29,7 +29,7 @@ public class SearchTest {
 		freshHome.SearchByKeywork();
 		
 		//SearchPage searchPage=new SearchPage(driver);
-		SearchPage searchPage=PageFactory.initElements(driver, SearchPage.class);
+		FreshSearch searchPage=PageFactory.initElements(driver, FreshSearch.class);
 		//String a=searchPage.GetSearchResult();
 		Assert.assertTrue(searchPage.GetSearchResult().contains("sk"));
 		//searchPage.FileUpload();

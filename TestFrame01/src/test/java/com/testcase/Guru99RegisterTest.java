@@ -17,9 +17,9 @@ public class Guru99RegisterTest {
 	public void Setup() {
 		BrowserEngine browserEngine=new BrowserEngine("Firefox");
 		driver=browserEngine.GetBrowser();
-		//http://demo.guru99.com/insurance/v1/register.php
-		//http://localhost:8079/demo/Register.html
-		driver.get("http://localhost:8079/demo/Register.html");
+		String url="http://demo.guru99.com/insurance/v1/register.php";
+		//String url="http://localhost:8079/demo/Register.html";
+		driver.get(url);
 		//Thread.sleep(2000);
 	}
 	

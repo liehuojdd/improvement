@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.pageobject.FreshHome;
-import com.pageobject.SearchPage;
+import com.pageobject.FreshSearch;
 import com.util.BrowserEngine;
 
 public class FreshHomeTest {

@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.pageobject.FreshHome;
-import com.pageobject.SearchPage;
+import com.pageobject.FreshSearch;
 import com.testcase.FreshHomeTest;
 import com.util.BrowserEngine;
 import com.util.DBConnection;
@@ -24,7 +24,7 @@ public class MyTest {
 		freshHome.SearchByKeywork();
 		
 		//SearchPage searchPage=new SearchPage(driver);
-		SearchPage searchPage=PageFactory.initElements(driver, SearchPage.class);
+		FreshSearch searchPage=PageFactory.initElements(driver, FreshSearch.class);
 		String a=searchPage.GetSearchResult();
 		searchPage.FileUpload();
 		String b="";

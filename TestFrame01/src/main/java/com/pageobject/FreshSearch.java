@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.util.BasePage;
 
-public class SearchPage extends BasePage {
+public class FreshSearch extends BasePage {
 	
-	public SearchPage(WebDriver driver) {
+	public FreshSearch(WebDriver driver) {
 		super(driver);
 	}
 
