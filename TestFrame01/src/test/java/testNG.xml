@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="baidu">
-    <test name="baidu">
-    	<parameter name="sitecd" value="IBDB"/>
+<suite name="Fresh">
+	<test name="Fresh"> 
         <classes>
             <class name="com.testcase.FreshHomeTest"></class>
-            <class name="com.testcase.SearchTest"></class>
+            <class name="com.testcase.FreshSearchTest"></class>
+        </classes>
+    </test>
+    <test name="Guru99">
+    	<parameter name="browser" value="Firefox"/>  
+        <classes>
+            <class name="com.testcase.Guru99RegisterTest">
+            	<methods>
+					<include name="DragTest" />
+					<include name="Guru99Register" />
+					<include name="ElementPresent" />
+				</methods>
+            </class>
         </classes>
     </test>
 </suite>

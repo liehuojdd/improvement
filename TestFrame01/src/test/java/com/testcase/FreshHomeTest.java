@@ -22,7 +22,6 @@ public class FreshHomeTest {
 		BrowserEngine browserEngine=new BrowserEngine("Firefox");
 		driver=browserEngine.GetBrowser();
 		
-		
 		driver.get("https://fresh.jd.com/");
 		//Thread.sleep(2000);
 	}

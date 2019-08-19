@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.util.BasePage;
+import com.util.Logger;
 
 public class FreshSearch extends BasePage {
 	
@@ -25,7 +26,9 @@ public class FreshSearch extends BasePage {
 	public String GetSearchResult() {
 		//Is that no wait?
 		//return searchResult.getText();
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'GetText' function finish.");
 		return this.GetText(searchResultLocator);
+		
 	}
 	
 	public void FileUpload() {

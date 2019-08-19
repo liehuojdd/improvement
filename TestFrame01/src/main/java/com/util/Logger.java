@@ -11,6 +11,7 @@ public class Logger {
 	public static String OutputFileName = getDateTimeByFormat(new Date(), "yyyyMMdd_HHmmss");
 	private static OutputStreamWriter outputStreamWriter;
 	private static String logFileName;
+	//Start write log or not.
 	public static boolean LogFlag = true;
 	
 	public enum LogTypeName{

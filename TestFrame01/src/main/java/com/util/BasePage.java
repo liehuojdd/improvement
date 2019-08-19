@@ -23,7 +23,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */  
 public class BasePage {
 	public WebDriver driver;
-
 	private String fileUpload = "D:\\hw.jpg";
 	
 
@@ -54,7 +53,7 @@ public class BasePage {
 		try {
 			if (element.isEnabled()) {
 				element.clear();
-				Logger.Output(Logger.LogTypeName.INFO, "Element " + element.toString() + " was cleaned.");
+				//Logger.Output(Logger.LogTypeName.INFO, "Element " + element.toString() + " was cleaned.");
 			}
 		} catch (Exception e) {
 			Logger.Output(Logger.LogTypeName.ERROR, e.getMessage() + ".");

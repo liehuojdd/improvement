@@ -3,16 +3,17 @@ package com.pageobject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ISelect;
 
 import com.util.BasePage;
+import com.util.Logger;
+
+import junit.framework.Assert;
 
 public class Guru99Register extends BasePage {
 
 	@FindBy(id="user_title")
 	WebElement titleList;
-	
-	@FindBy(id="BaiDuLink")
-	WebElement baiduLink;
 	
 	@FindBy(id="user_surname")
 	WebElement snameTxt;
@@ -45,20 +46,24 @@ public class Guru99Register extends BasePage {
 	public Boolean IsVisiable() {
 		//this.Click(loginBtn);
 		System.out.println(this.GetPageTitle());
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'get title' function finish.");
 		System.out.println(this.GetPageUrl());
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'get url' function finish.");
 		this.Type(confrimPsw, "text");
 		//this.Click(submitBtn);
 		return this.VerifyElementIsPresent(loginBtn);
 	}
 	
-	public void SwitchTest() {
-		this.Click(baiduLink);
-		this.SwitchToMain();
-	}
-	
 	public void DragTest() {
 		this.Click(snameTxt);
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'mouse event' function finish.");
 		this.ScrollToButtom();
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'scroll' function finish.");
+	}
+	
+	public void ElementPresent() {
+		Assert.assertTrue(VerifyElementIsPresent(titleList));
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'element present' function finish.");
 	}
 	
 }

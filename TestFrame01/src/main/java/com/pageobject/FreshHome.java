@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.util.BasePage;
+import com.util.Logger;
+
+import junit.framework.Assert;
 
 public class FreshHome extends BasePage {
 	
@@ -33,6 +36,9 @@ public class FreshHome extends BasePage {
 	@FindBy(id="shelper")
 	WebElement shelper;
 	
+	@FindBy(xpath="//a[@class='fresh_fs_menu_item'][1]")
+	WebElement fsMenu;
+	
 	
 	//Get element
 	//element.getAttribute(attr);
@@ -57,21 +63,38 @@ public class FreshHome extends BasePage {
 		
 	}
 	
-	public void SelectAllCategory() {
-		
+	public void ClickFsMenu() {
+		Click(fsMenu);
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'Click by Element' function finish.");
 	}
 	
 	public void SearchByKeywork() {
 		try {
 			String keyword = "sk";
-			this.Type(searchBox, keyword);
-			this.Clean(searchBox);//Function:Clean Test
 			
 			this.Type(searchBox, keyword);
-			System.out.println("Attrbute class:"+this.GetAttributeValue(searchBox, "class"));//Function: Get Attribute
+			this.Clean(searchBox);
+			Logger.Output(Logger.LogTypeName.INFO, "Test 'Type' function finish.");
+			Logger.Output(Logger.LogTypeName.INFO, "Test 'Clean' function finish.");
+			
+			this.Type(searchBox, keyword);
+			String classValue=this.GetAttributeValue(searchBox, "class");
+			Boolean a=this.GetAttributeValue(searchBox, "class").equalsIgnoreCase("text defcolor");
+			Assert.assertTrue(classValue.equals("text defcolor"));
 			Click(searchBtnLocator);
+			Logger.Output(Logger.LogTypeName.INFO, "Test 'Get Attrbute' function finish.");
+			Logger.Output(Logger.LogTypeName.INFO, "Test 'Click by selector' function finish.");
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+	}
+	
+	public void SwitchTab() {
+		Click(fsMenu);
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'Click by element' function finish.");
+		SwitchToMain();
+		Logger.Output(Logger.LogTypeName.INFO, "Test 'switch tab' function finish.");
+		
 	}
 }
